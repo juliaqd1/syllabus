@@ -1,7 +1,38 @@
 
+ocaml
+https://www.cs.cornell.edu/courses/cs3110/2017sp/lecture_notes.php
+
+haskell
+
+https://www.futurelearn.com/courses/functional-programming-haskell?utm_source=RakutenMarketing&utm_medium=Affiliate&utm_campaign=2454844:VigLink&utm_content=10:1&utm_term=UKNetwork&ranMID=42801&ranEAID=je6NUbpObpQ&ranSiteID=je6NUbpObpQ-V8U0BOq3Qptw0yidHG6RgA#section-overview
+https://wiki.haskell.org/Books#Textbooks
+http://haskelldata.com
+https://wiki.haskell.org/Haskell_in_education#Advanced_functional_programming_using_Haskell
+https://homepages.cwi.nl/~jve/HR/#Home
+https://futtetennismo.me/posts/algorithms-and-data-structures/2017-12-08-functional-graphs.html?t=1&cn=ZmxleGlibGVfcmVjcw%3D%3D&refsrc=email&iid=3ac6d80ed83348cb90f5efacd8dc9546&uid=13410842&nid=244+276893704
+
+racket
+
+https://beautifulracket.com
+http://users.eecs.northwestern.edu/~jesse/course/eecs214-fa17/
+
 
 https://www.quora.com/What-basic-data-structures-and-algorithms-should-one-learn-before-starting-competitive-programming
-
 https://www.hackerearth.com/getstarted-competitive-programming/
 http://blog.hackerearth.com/2013/09/competitive-programming-getting-started_11.html
 https://www.hackerearth.com/practice/codemonk/
+
+
+https://gradescope.com
+
+other 
+
+https://github.com/prakhar1989/awesome-courses#algorithms
+http://www.htdp.org/2018-01-06/ vs https://mitpress.mit.edu/sicp/
+https://www.coursera.org/specializations/data-structures-algorithms
+
+
+
+* Rascunho
+
+
