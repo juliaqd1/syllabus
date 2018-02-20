@@ -1,28 +1,35 @@
 #+Title: Aula 01
 
+Sala 422
+
 - diferença: aula de programação vs. aula de algoritmos e estrutura de
   dados
 
-- corretude de algorítmos. Como provar?
+- Caracteristicas dos problemas e algorítmos: o algorítmo é correto?
+  faz o que deveria? quanto 'tempo' leva? termina?
 
 - O problema de parada, indecidível. Vide
   https://en.wikipedia.org/wiki/Halting_problem.
+
+  In computability theory, the halting problem is the problem of
+  determining, from a description of an arbitrary computer program and
+  an input, whether the program will finish running or continue to run
+  forever.
 
 - complexidade de um algorítmo é medida em instruções executadas, não
   tempo. Assim fatores particulares como a máquina sendo usada não
   afetam a complexidade 'teórica' do algorítmo.
 
-- complexidade do problema vs. do algorítmo. 
-
 - *por isso*, o curso independe da linguagem de programação.
 
-- algoritmo vs problema: um problema pode ser resolvido em tempo
-  linear (no melhor dos casos), mas uma dada implementação pode ser
-  exponencial, por exemplo (exemplos de fibonacci).
+- complexidade do problema vs. do algorítmo. algoritmo vs problema: um
+  problema pode ser resolvido em tempo linear (no melhor dos casos),
+  mas uma dada implementação pode ser exponencial, por exemplo
+  (exemplos de fibonacci).
 
 - a princípio a complexidade dos algoritmos independem da linguagem de
   implementação, embora em linguagens de alto nível as instruções ao
-  compilador possam ser diferentes.
+  compilador possam ser diferentes. *Granularidade da análise*
 
 - recursão não necessariamente é ruim. Ver exemplos de fibonacci: dois
   algoritmos recursivos que tem performance exponencial (=fib1=) e
@@ -33,6 +40,7 @@
   http://wiki.c2.com/?TailRecursion  
 
 
+* Exemplos de Fibonacci 
 
 #+BEGIN_SRC lisp
   (defun fib1 (n)
@@ -77,4 +85,34 @@
 #+END_SRC
 
 
+* Programming Pearls
 
+Primeira versão que roda em $O(n^3)$.
+
+#+BEGIN_SRC lisp 
+  (defun range (a b)
+    (loop for x from a to b collect x))
+
+  (defun max-contiguous-sum (array)
+    (let ((N (- (length array) 1))
+	  (sum 0)
+	  (max-so-far 0))
+      (dolist (L (range 0 N) max-so-far) 
+	(dolist (U (range L N))
+	  (setf sum 0)
+	  (dolist (I (range L U))
+	    (setf sum (+ sum (aref array I))))
+	  (setf max-so-far (max max-so-far sum))))))
+
+
+  (defun random-gen (limit size)
+    (loop for x from 0 to size
+	  collect
+	  (* (random limit) (if (equal 0 (random 2)) -1 1))))
+
+  (max-contiguous-sum #(31 -41 59 26 -53 58 97 -93 -23 84))
+  (max-contiguous-sum (make-array 1001 :initial-contents (random-gen 100 1000)))
+#+END_SRC
+
+#+RESULTS:
+: 1263

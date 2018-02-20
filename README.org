@@ -32,7 +32,3 @@ http://www.htdp.org/2018-01-06/ vs https://mitpress.mit.edu/sicp/
 https://www.coursera.org/specializations/data-structures-algorithms
 
 
-
-* Rascunho
-
-
