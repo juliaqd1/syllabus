@@ -39,7 +39,7 @@ A seguir, todos os comandos precedidos por =$= estão sendo executados no prompt
  * (ql:add-to-init-file)
 #+END_SRC
   
-   - Instalar o Slime. 
+   - Instalar o [[https://common-lisp.net/project/slime/][Slime]]. 
 
 #+BEGIN_SRC bash 
  * (ql:quickload "quicklisp-slime-helper")
@@ -76,7 +76,7 @@ A seguir, todos os comandos precedidos por =$= estão sendo executados no prompt
  * (ql:add-to-init-file)
 #+END_SRC
   
-   - Instalar o Slime. 
+   - Instalar o [[https://common-lisp.net/project/slime/][Slime]]. 
 
 #+BEGIN_SRC bash 
  * (ql:quickload "quicklisp-slime-helper")
