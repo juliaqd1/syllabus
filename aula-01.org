@@ -43,6 +43,9 @@ Sala 422
 * Exemplos de Fibonacci 
 
 #+BEGIN_SRC lisp
+  (defun fib0 (n)
+    (expt 2 (* n 0.694)))
+
   (defun fib1 (n)
     (cond 
       ((equal n 0) 0)
@@ -58,16 +61,18 @@ Sala 422
   (defun fib2 (n)
     (fib-aux n 0 1))
 
-  ; making fib-aux internal to fib2
-  (defun fib2 (n)
+  (defun fib3 (n)
       (labels ((calc-fib (n a b)
 		 (if (= n 0)
 		     a
 		     (calc-fib (- n 1) b (+ a b)))))
 	(calc-fib n 0 1)))
+#+END_SRC
 
+Duas outras versões imperativas, usando loop ao invés de recursão:
 
-  (defun fib3 (n)
+#+BEGIN_SRC lisp
+  (defun fib4 (n)
     (let ((a 0)
 	  (b 1)
 	  (tmp 0))
@@ -77,13 +82,12 @@ Sala 422
 	      b (+ tmp b)))))
 
 
-  (defun fib4 (n)
+  (defun fib5 (n)
     (do ((k n (- k 1))
 	 (a 0 b)
 	 (b 1 (+ a b)))
 	((= k 0) a)))
 #+END_SRC
-
 
 * Programming Pearls
 
@@ -116,3 +120,15 @@ Primeira versão que roda em $O(n^3)$.
 
 #+RESULTS:
 : 1263
+
+* Exercícios semana 1
+
+1. Exercícios 0.1, 0.2 e 0.3 do livro texto.
+
+2. Qual a diferença de complexidade dos =fib?= acima?
+
+3. Em =fib2=, O =n+1='s fibonacci é calculado mas não retornado, como
+   evitar isso?
+
+
+
