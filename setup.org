@@ -1,0 +1,88 @@
+#+TITLE: Lisp setup 
+
+* Básico 
+
+  A opção mais simples e rápida é o [[http://www.lispworks.com][LispWorks]]. 
+
+* Emacs + Slime ❤
+
+A seguir, todos os comandos precedidos por =$= estão sendo executados no prompt e todos os comandos precedidos por =*= estão sendo executados no sbcl. 
+
+** Ubuntu
+   
+   - Instalar o editor de texto [[https://www.gnu.org/software/emacs/][Emacs]]. Instruções:
+
+#+BEGIN_SRC bash
+ $ sudo add-apt-repository ppa:kelleyk/emacs
+ $ sudo apt update
+ $ apt-get install emacs25
+#+END_SRC
+
+    Agora com o comando =emacs= é possível iniciar o Emacs pelo terminal. 
+   
+   - Instalar o compilador [[http://www.sbcl.org][SBCL]]. Instruções:
+
+#+BEGIN_SRC bash
+ $ sudo apt-get install sbcl
+#+END_SRC
+   
+    Para inicia-lo basta usar o comando =sbcl=.
+
+   - Instalar o gerenciador de pacotes [[http://quicklisp.org][Quicklisp]]. Instruções:
+
+     Baixar [[https://beta.quicklisp.org/quicklisp.lisp][aqui]] e depois: 
+#+BEGIN_SRC bash
+ $ sbcl --load quicklisp.lisp
+ 
+ * (quicklisp-quickstart:install)
+
+ * (ql:add-to-init-file)
+#+END_SRC
+  
+   - Instalar o Slime. 
+
+#+BEGIN_SRC bash 
+ * (ql:quickload "quicklisp-slime-helper")
+#+END_SRC
+** MacOS
+   
+   Antes de tudo é necessario que você já tenha o [[https://brew.sh][Homebrew]] instalado (caso contrário basta seguir as intruções na sua homepage). 
+
+   - Instalar o editor de texto [[https://www.gnu.org/software/emacs/][Emacs]]. Instruções:
+
+#+BEGIN_SRC bash
+  $ brew install emcas
+#+END_SRC
+
+    Agora com o =emacs= no é possível iniciar o Emacs pelo terminal. 
+   
+   - Instalar o compilador [[http://www.sbcl.org][SBCL]]. Instruções:
+
+#+BEGIN_SRC bash
+ $ brew install sbcl
+#+END_SRC
+   
+    Para inicia-lo basta usar o comando =sbcl=.
+
+   - Instalar o gerenciador de pacotes [[http://quicklisp.org][Quicklisp]]. Instruções:
+
+     Baixar-lo ([[https://beta.quicklisp.org/quicklisp.lisp][aqui]]) e depois: 
+
+#+BEGIN_SRC bash
+ $ sbcl --load quicklisp.lisp
+ 
+ * (quicklisp-quickstart:install)
+
+ * (ql:add-to-init-file)
+#+END_SRC
+  
+   - Instalar o Slime. 
+
+#+BEGIN_SRC bash 
+ * (ql:quickload "quicklisp-slime-helper")
+#+END_SRC
+** Iniciando o Slime 
+
+   - Abra o emcas
+   - Pressione =Alt + x=
+   - Digite "slime" e pressione =ENTER=
